@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1250"/>
+        <title>Okno glowne</title>
+    </head>
+    <body>
+        <b>Filtruj dane</b>
+         
+        <br/><br/>
+         
+        <form name="showForm" action="showdatabaseservlet" method="get">
+            Data produkcji (format RRRR-MM-DD):
+            <br/>
+            <label for="startDate">Poczatek:</label>
+            <input type="text" id="startDate" name="startDate"/>
+            <br/>
+            <label for="endDate">Koniec:</label>
+            <input type="text" id="endDate" name="endDate"/>
+            <br/>
+            <br/>
+            <label for="surSub">Slowo kluczowe nazwiska:</label>
+            <input type="text" id="surSub" name="surSub"/>
+            <br/>
+            <br/>
+            Sortuj:
+            <br/>
+            <input type="radio" id="byID" name="sort" value="byID" checked="checked"/>
+            <label for="byID">po ID</label>
+            <br/>
+            <input type="radio" id="byName" name="sort" value="byName"/>
+            <label for="byName">po nazwisku i imieniu</label>
+            <br/>
+            <input type="radio" id="byDate" name="sort" value="byDate"/>
+            <label for="byDate">po dacie</label>
+            <br/>
+            <br/>
+            <input type="submit" value="Szukaj"/>
+        </form>
+         
+        <br/><br/>
+        <hr/>
+        <b>Usuwaj dane</b>
+         
+        <br/><br/>
+         
+        <form name="deleteForm" action="deleteservlet" method="get">
+            Podaj ID rekordu do usuniecia:
+            <input type="text" id="delID" name="delID"/>
+            <br/>
+            <br/>
+            <input type="submit" value="Usun"/>
+        </form>
+         
+        <br/><br/>
+        <hr/>
+        <b>Modyfikuje dane</b>
+         
+        <br/><br/>
+         
+        <form name="updateForm" action="updateservlet" method="get">
+            Podaj ID rekordu do modyfikacji:
+            <input type="text" id="addID" name="addID"/>
+            <br/>
+            <br/>
+            Podaj nowe dane:
+            <br/>
+            Imie:
+            <input type="text" id="name" name="name"/>
+            <br/>
+            Nazwisko:
+            <input type="text" id="surname" name="surname"/>
+            <br/>
+            ID samochodu:
+            <input type="text" id="carID" name="carID"/>
+            <br/>
+            Data produkcji:
+            <input type="text" id="date" name="date"/>
+            <br/>
+            <br/>
+            <input type="submit" value="Modyfikuj"/>
+        </form>
+         
+        <br/><br/>
+        <hr/>
+        <b>Dodawaj dane</b>
+         
+        <br/><br/>
+         
+        <form name="addForm" action="addservlet" method="get">
+            Podaj dane nowego rekordu:
+            <br/>
+            ID:
+            <input type="text" id="personID" name="personID"/>
+            <br/>
+            Imie:
+            <input type="text" id="name" name="name"/>
+            <br/>
+            Nazwisko:
+            <input type="text" id="surname" name="surname"/>
+            <br/>
+            ID samochodu:
+            <input type="text" id="carID" name="carID"/>
+            <br/>
+            Data produkcji:
+            <input type="text" id="date" name="date"/>
+            <br/>
+            <br/>
+            <input type="submit" value="Dodaj"/>
+        </form>
+         
+        <br/><br/>
+    </body>
+</html>
