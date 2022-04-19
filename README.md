@@ -1,2 +1,2 @@
 # SimplePage
-Simple page with local database connection
+Simple page with database connection and servlets in java.
